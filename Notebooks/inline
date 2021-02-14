@@ -1,0 +1,486 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "green-adaptation",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "caroline-luxury",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "noted-checklist",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled = pd.read_csv(\"../Dataset/Kscaled.csv\")\n",
+    "Oscaled = pd.read_csv(\"../Dataset/Ocscaled.csv\")\n",
+    "Pscaled = pd.read_csv(\"../Dataset/Pscaled.csv\")\n",
+    "Nscaled = pd.read_csv(\"../Dataset/scaledN.csv\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "difficult-british",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "opened-pride",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.hist(Kscaled['Scaled K'],bins = 80)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "considered-bolivia",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Oscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "assigned-impossible",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.hist(Oscaled['Scaled Oc'],bins = 80)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "military-algorithm",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.hist(Oscaled['Scaled P'],bins = 80)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "radio-seafood",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.hist(Pscaled['Scaled P'],bins = 80)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "sweet-vitamin",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "## Nitrogen"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "interpreted-state",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.hist(Nscaled['Scaled N'],bins = 80)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "vertical-television",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Nscaled.shape"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "accomplished-rescue",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "np.unique(Nscaled.Longitude)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "special-volume",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "len(np.unique(Nscaled.Longitude))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "damaged-distribution",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "!pip install scikit-gstat"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "earned-coach",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Ordinary Kriging"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "hollywood-parameter",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Ordinary Kriging"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "dangerous-brief",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "!pip install scikit-gstat"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 19,
+   "id": "joined-atlantic",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# !pip install scikit-gstat"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "delayed-performer",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import skgstat as skg"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 21,
+   "id": "closing-triangle",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import skgstat as skg\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 22,
+   "id": "tropical-israeli",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled = pd.read_csv(\"../Dataset/Kscaled.csv\")\n",
+    "Oscaled = pd.read_csv(\"../Dataset/Ocscaled.csv\")\n",
+    "Pscaled = pd.read_csv(\"../Dataset/Pscaled.csv\")\n",
+    "Nscaled = pd.read_csv(\"../Dataset/scaledN.csv\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 23,
+   "id": "finished-enlargement",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 24,
+   "id": "valid-deposit",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "plt.hist(Kscaled['Scaled K'],bins = 80)\n",
+    "plt.show()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "specific-brazilian",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import geopandas as gpd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import skgstat as skg\n",
+    "%notebook inline"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 26,
+   "id": "fossil-trial",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled = gpd.read_file(\"../Dataset/Kscaled.csv\")\n",
+    "Oscaled = pd.read_csv(\"../Dataset/Ocscaled.csv\")\n",
+    "Pscaled = pd.read_csv(\"../Dataset/Pscaled.csv\")\n",
+    "Nscaled = pd.read_csv(\"../Dataset/scaledN.csv\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 27,
+   "id": "productive-seeking",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 28,
+   "id": "facial-termination",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled.plot(Kscaled['Scaled K'])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 29,
+   "id": "interracial-chess",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "?Kscaled"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 30,
+   "id": "historic-trailer",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(zip(Kscaled['Longitude'],Kscaled['Latitude']),\n",
+    "                    values=Kscaled['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 31,
+   "id": "molecular-patient",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(zip(Kscaled['Longitude','Latitude'].values),\n",
+    "                    values=Kscaled['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 32,
+   "id": "declared-marine",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(Kscaled['Longitude','Latitude'].values),\n",
+    "                    values=Kscaled['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 33,
+   "id": "lasting-ecuador",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(Kscaled['Longitude','Latitude'].values,\n",
+    "                    values=Kscaled['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 34,
+   "id": "binding-secretariat",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(Kscaled.Latitude,Kscaled.Longitude,\n",
+    "                    values=Kscaled['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 35,
+   "id": "forty-machinery",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(Kscaled[['Longitude','Latitude']].values,\n",
+    "                    values=Kscaled['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 36,
+   "id": "advanced-camera",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled_new = Kscaled.head(10)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 37,
+   "id": "quality-saying",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(Kscaled_new[['Longitude','Latitude']].values,\n",
+    "                    values=Kscaled_new['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 38,
+   "id": "circular-organization",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled_new = Kscaled.head(50)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 39,
+   "id": "latin-sequence",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled_new = Kscaled.head(50)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 40,
+   "id": "recovered-karma",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "v_p = skg.Variogram(Kscaled_new[['Longitude','Latitude']].values,\n",
+    "                    values=Kscaled_new['Scaled K'],normalize=False, n_lags = 20,\n",
+    "                   maxlag=0.5,bin_func='uniform', verbose=True, use_nugget=True)\n",
+    "v_p.plot()\n",
+    "print(v_p.describe)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 41,
+   "id": "polished-abortion",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import geopandas as gpd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import skgstat as skg\n",
+    "plt.style.use('ggplot')\n",
+    "os.environ['SKG_SUPPRESS'] = \"true\"\n",
+    "%notebook inline"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
