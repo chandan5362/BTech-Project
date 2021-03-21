@@ -1,1 +1,0 @@
-### Contains BTech Project resources

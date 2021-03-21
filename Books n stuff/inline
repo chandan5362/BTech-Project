@@ -1,0 +1,91 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "tender-judge",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import numpy as np\n",
+    "import pandas as pd"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "criminal-tennessee",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled = pd.read_csv(\"Kscaled.csv\")\n",
+    "Oscaled = pd.read_csv(\"Ocscaled.csv\")\n",
+    "Pscaled = pd.read_csv(\"Pscaled.csv\")\n",
+    "Nscaled = pd.read_csv(\"scaledN.csv\")"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "productive-difficulty",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "creative-kazakhstan",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Kscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "unlikely-jenny",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Oscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "random-relay",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Pscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "bacterial-exchange",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Pscaled.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "exotic-frost",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "Nscaled.head()"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
