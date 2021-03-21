@@ -1,4 +1,4 @@
 # BTech-Project
 ## contents -
-  * High resolution spatial mapping (in process)
+  * High resolution spatial mapping of soil nutrients (in process)
  
